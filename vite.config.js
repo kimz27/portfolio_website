@@ -10,6 +10,7 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname,'./src'),
     }
-  }
+  },
+  base: process.env.VITE_BASE_PATH || "/react-vite-deploy",
 })
 
