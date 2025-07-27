@@ -1,6 +1,19 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script>
+    (function() {
+      const theme = localStorage.getItem('theme');
+      if (theme === 'light') {
+        //set light mode if explicitly chosen
+        document.documentElement.classList.remove('dark');
+      } else {
+        // Default to dark mode
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    })();
+    </script>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/KM-logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
