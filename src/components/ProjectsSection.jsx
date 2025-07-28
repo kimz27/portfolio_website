@@ -7,8 +7,8 @@ const projects = [
         description: "A personal portfolio website showcasing my skills and projects.",
         image: "/projects/project1.jpg",
         tags: ["React", "Tailwind CSS", "JavaScript"],
-        demoURL: "#",
-        gitthubURL: "#"
+        demoURL: "https://kimzmutale.vercel.app/",
+        gitthubURL: "https://github.com/kimz27/portfolio_website"
     },
     {
         id: 2,
@@ -63,9 +63,15 @@ export const ProjectsSection = () => {
                                     <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
                                     <div className="flex justify-between items-center">
                                         <div className="flex space-x-3">
-                                            <a href={project.demoURL} target="_blank" className="text-foreground/80 hover:text-primary transition-colors duration-300">
-                                                <ExternalLink size={20}/>
-                                            </a>
+                                            {project.demoURL && project.demoURL !== "#" && (
+                                                <a
+                                                    href={project.demoURL}
+                                                    target="_blank"
+                                                    className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                                                >
+                                                    <ExternalLink size={20} />
+                                                </a>
+                                            )}
                                             <a href={project.gitthubURL} title="View Repository" target="_blank" className="text-foreground/80 hover:text-primary transition-colors duration-300">
                                                 <Github size={20}/>
                                             </a>
