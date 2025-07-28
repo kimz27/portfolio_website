@@ -5,7 +5,7 @@ const projects = [
         id: 1,
         title: "Portfolio Website",
         description: "A personal portfolio website showcasing my skills and projects.",
-        image: "/projects/project1.jpg",
+        image: "/projects/project1.png",
         tags: ["React", "Tailwind CSS", "JavaScript"],
         demoURL: "https://kimzmutale.vercel.app/",
         gitthubURL: "https://github.com/kimz27/portfolio_website"
